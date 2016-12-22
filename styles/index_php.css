@@ -1,0 +1,114 @@
+body{background: #efefef url(../img/bg.jpg); margin:0; padding: 0; 
+	font: 16px/24px Arial, Tahoma, sans-serif; color: #272727}
+a{text-decoration: none;}
+
+/*Структура сайта*/
+.header{height: 100px; background: rgba(51, 51, 51, 0.9);}
+.mid{width: 1000px; margin: 0 auto;}
+
+/*Шапка сайта*/
+.topmenu{float: right; height: 100px; line-height: 100px}
+.topmenu a{margin: 0 10px 0 10px; color: #00ccff;}
+.topmenu a:hover{color: #fff;}
+
+/*Главное меню*/
+div.menu{
+	background: #1683a3;
+	border: 1px solid #016c8b;
+	border-left: none;
+	border-right: none;
+}
+div.menu ul{margin: 2px; padding: 0; list-style: none; text-align: center;}
+div.menu ul li{display: inline-block; margin: 5px 20px;}
+div.menu ul li a{color: #fff; text-transform: uppercase; text-shadow: 1px 1px 3px #0b4455;}
+div.menu ul li a:hover{color:#ffff00;}
+
+/*Контент главной страницы*/
+div.fon {background: rgba(51, 51, 51, 0.9); border: 1px solid #fff; border-top: none; padding: 40px;}
+div.fon hr.line {border: none; border-bottom: 1px dashed #ccc; height: 0; margin: 40px 0;}
+div.block {width: 440px; float: left;}
+div.block:nth-of-type(even){float: right;}
+div.block a p{color: #272727;}
+div.anons {
+	background: #f5f5f5;
+	border: 1px solid #ccc; 
+	padding: 20px; 
+	border-radius: 3px;
+}
+
+div.anons:hover{background: #e0eff4; border: 1px solid #bfd5dd;}
+div.anons img{box-shadow: 1px 1px 5px #777; transition: transform 0.5s;}
+div.anons:hover img{transform:scale(1.1) rotate(3deg);}
+div.block:nth-of-type(even) div.anons:hover img{transform:scale(1.1) rotate(-3deg);}
+div.anons h3 {
+	font-size: 20px;
+	font-weight: normal;
+	margin: 20px 0 10px;
+	color: #01617d;
+	padding: 0;
+	line-height: 20px;
+}
+div.anons p{text-shadow: 1px 1px 0 #fff;}
+div.clear{clear: both;}
+div.advert{margin: 40px 0;}
+div.advert img{border: 1px solid #ccc; border-radius: 3px; transition: transform 0.5s;}
+div.advert:hover img{transform:scale(1.1);}
+/*Footer*/
+div.footer{
+	margin: 20px auto;
+	padding: 5px 0;
+	text-align: center;
+	width: 1000px;
+	background: rgba(51, 51, 51, 0.9);
+	border: 1px solid #fff;
+}
+div.footer span{margin: 0 20px; color: #fff;}
+div.footer span a{color: #fff;}
+div.footer span a:hover{color:#00ffff;}
+
+/*Адаптивный дизайн. Не работает, крашится разметка*/
+/*@media screen and (max-width: 999px){
+	div.mid{width: 95%;}
+	div.block {width: 48%;}
+	div.anons img, div.advert img {width: 100%;}
+	div.anons h3{font-size: 18px;}
+	div.slider-box{width: 95%;}
+}*/
+
+/*Слайдер*/
+.slider-block{
+	background: rgba(51, 51, 51, 0.9);
+	align-content: center;
+}
+.slider-box{
+  position:relative;
+  width:1000px;
+  height:300px;
+  overflow:hidden;
+  border: 2px solid black;
+  border-radius:10px;
+}
+.slider{
+  position:relative;
+  width:7000px;
+  height:300px;
+}
+.slider img{
+  float:left;
+}
+.slider-box .prev, .slider-box .next{
+  position:absolute;
+  top:86px;
+  display:block;
+  width:128px;
+  height:128px;
+  cursor:pointer;
+}
+.slider-box .prev{
+  left:-20px;
+  background:url(../img/prev.png) no-repeat 0 0;
+}
+.slider-box .next{
+  right:-50px;
+  background:url(../img/next.png) no-repeat -29px 0;
+}
